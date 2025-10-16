@@ -1,6 +1,8 @@
 <?php 
+  define('PATH_LOG', 'log/path.log');
   include 'inc/headers.inc.php'; 
   include 'inc/cookie.inc.php'; 
+  include 'inc/log.inc.php';
 
 if ($visitCounter == 1) {
     echo "<p>Спасибо, что зашли на огонёк!</p>";
@@ -8,6 +10,7 @@ if ($visitCounter == 1) {
     echo "<p>Вы зашли к нам {$visitCounter}-й раз.</p>";
     echo "<p>Последнее посещение: {$lastVisit}</p>";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -54,6 +57,8 @@ if ($visitCounter == 1) {
       </li>
       <li><a href='index.php?id=gbook'>Гостевая книга</a>
       </li>
+      <li><a href='index.php?id=log'>Журнал посещений</a>
+      </li> 
     </ul>
     <!-- Навигация -->
   </div>
